@@ -16,13 +16,15 @@ public class Main {
         sinopse = """
                 Filme Top Gun
                 Filme de Aventura anos 80
-                Ano de lancament
+                Ano de lancamento
                 """ + anoDeLancamento;
         System.out.println(sinopse);
 
-        int classificacao;
-        classificacao = (int) (media /2);
+        int classificacao = (int) (media /2);
         System.out.println(classificacao);
+        
+
+
 
 
 
