@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Screen Match");
-        System.out.println("Filme: Top Gun: Maverick");
+        System.out.println("project.java.hector.streaming.modelos.Filme: Top Gun: Maverick");
 
 
         int anoDeLancamento = 2022;
@@ -14,15 +14,15 @@ public class Main {
         System.out.println(media);
         String sinopse;
         sinopse = """
-                Filme Top Gun
-                Filme de Aventura anos 80
+                project.java.hector.streaming.modelos.Filme Top Gun
+                project.java.hector.streaming.modelos.Filme de Aventura anos 80
                 Ano de lancamento
                 """ + anoDeLancamento;
         System.out.println(sinopse);
 
         int classificacao = (int) (media /2);
         System.out.println(classificacao);
-        
+
 
 
 

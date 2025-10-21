@@ -9,11 +9,11 @@ public class Condicioal {
        if (anoDeLancamento >= 2022){
            System.out.println("Lancamento que os clientes estao curtindo");
        } else {
-           System.out.println("Filme retro");
+           System.out.println("project.java.hector.streaming.modelos.Filme retro");
        }
 
        if (incluidoNoPlano == true && tipoPlano.equals("plus")){
-           System.out.println("Filme liberado");
+           System.out.println("project.java.hector.streaming.modelos.Filme liberado");
        } else {
            System.out.println("Deve pagar a locacao");
        }
