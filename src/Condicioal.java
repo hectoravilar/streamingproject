@@ -12,7 +12,7 @@ public class Condicioal {
            System.out.println("Filme retro");
        }
 
-       if (incluidoNoPlano == true && tipoPlano == "plus"){
+       if (incluidoNoPlano == true && tipoPlano.equals("plus")){
            System.out.println("Filme liberado");
        } else {
            System.out.println("Deve pagar a locacao");

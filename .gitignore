@@ -3,6 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
+desafio.java
 
 ### Eclipse ###
 .apt_generated
