@@ -1,6 +1,9 @@
 package project.java.hector.streaming.modelos;
 
 import project.java.hector.streaming.calculos.CalculadoraDeTempo;
+import project.java.hector.streaming.calculos.Recomendacao;
+
+import javax.sql.rowset.FilteredRowSet;
 
 public class Principal {
     static void main() {
@@ -38,5 +41,17 @@ public class Principal {
         calculadora.inclui(outroFilme);
         calculadora.inclui(lost);
         System.out.println(calculadora.getTempoTotal());
+
+
+        Recomendacao filtro = new Recomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
+
+
     }
 }
