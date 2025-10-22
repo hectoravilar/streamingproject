@@ -3,8 +3,6 @@ package project.java.hector.streaming.modelos;
 import project.java.hector.streaming.calculos.CalculadoraDeTempo;
 import project.java.hector.streaming.calculos.Recomendacao;
 
-import javax.sql.rowset.FilteredRowSet;
-
 public class Principal {
     static void main() {
         Filme meuFilme = new Filme();
