@@ -8,7 +8,10 @@ Um sistema de gerenciamento de conteúdo para plataforma de streaming desenvolvi
 - **Sistema de Avaliações**: Permite avaliar conteúdos e calcular médias
 - **Calculadora de Tempo**: Soma o tempo total de duração dos conteúdos
 - **Sistema de Recomendações**: Filtra conteúdo baseado em classificações
-- **Controle de Episódios**: Gerenciamento detalhado de episódios de séries
+- **Controle de Episódios**: Gerenciamento detalhado de episódios com visualizações
+- **Coleções de Filmes**: Gerenciamento de listas usando ArrayList
+- **Método toString**: Representação textual personalizada dos objetos
+- **Sistema de Classificação por Visualizações**: Episódios classificados automaticamente
 
 ## 🏗️ Arquitetura
 
@@ -41,28 +44,40 @@ src/project/java/hector/streaming/
 
 ```java
 // Criando um filme
-Filme filme = new Filme();
+var filme = new Filme();
 filme.setNome("Back to the Future");
 filme.setAnoDeLancamento(1985);
 filme.setDuracaoEmMinutos(180);
 filme.avalia(8.5);
 
 // Criando uma série
-Serie serie = new Serie();
+var serie = new Serie();
 serie.setNome("Lost");
 serie.setTemporadas(6);
 serie.setEpisodiosPorTemporada(24);
 serie.setMinutosPorEpisodio(45);
 
+// Criando episódio com visualizações
+var episodio = new Episodio();
+episodio.setNumero(1);
+episodio.setSerie(serie);
+episodio.setTotalVisualizacoes(300);
+
+// Gerenciando lista de filmes
+var listaDeFilmes = new ArrayList<Filme>();
+listaDeFilmes.add(filme);
+System.out.println("Primeiro filme: " + listaDeFilmes.get(0).toString());
+
 // Calculando tempo total
-CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+var calculadora = new CalculadoraDeTempo();
 calculadora.inclui(filme);
 calculadora.inclui(serie);
 System.out.println("Tempo total: " + calculadora.getTempoTotal() + " minutos");
 
 // Sistema de recomendação
-Recomendacao recomendacao = new Recomendacao();
+var recomendacao = new Recomendacao();
 recomendacao.filtra(filme);
+recomendacao.filtra(episodio);
 ```
 
 ## 🎯 Conceitos Aplicados
@@ -70,7 +85,10 @@ recomendacao.filtra(filme);
 - **Programação Orientada a Objetos**: Herança, Polimorfismo, Encapsulamento
 - **Interfaces**: Implementação de contratos (Classificavel)
 - **Herança**: Titulo como classe base para Filme e Serie
-- **Polimorfismo**: Diferentes implementações de getDuracaoEmMinutos()
+- **Polimorfismo**: Diferentes implementações de getDuracaoEmMinutos() e getClassificacao()
+- **Collections**: Uso de ArrayList para gerenciar listas de filmes
+- **Override de Métodos**: toString() personalizado para representação de objetos
+- **Composição**: Episodio contém referência para Serie
 
 ## 📊 Funcionalidades Detalhadas
 
@@ -88,6 +106,17 @@ recomendacao.filtra(filme);
 - **Preferidos**: Classificação ≥ 4
 - **Bem Avaliados**: Classificação ≥ 2
 - **Ver Depois**: Classificação < 2
+
+### Gerenciamento de Episódios
+- Controle de número e nome do episódio
+- Associação com série específica
+- Sistema de visualizações (>100 = classificação 4, ≤100 = classificação 2)
+- Integração com sistema de recomendações
+
+### Coleções e Listas
+- Uso de ArrayList para gerenciar múltiplos filmes
+- Métodos de acesso por índice
+- Representação textual com toString() personalizado
 
 ## 🛠️ Tecnologias
 
