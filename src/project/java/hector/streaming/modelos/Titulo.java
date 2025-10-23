@@ -3,7 +3,7 @@ package project.java.hector.streaming.modelos;
 public class Titulo {
     private String nome;
     private int anoDeLancamento;
-    private  boolean incluidoNoPlano;
+    private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
@@ -24,16 +24,17 @@ public class Titulo {
         return duracaoEmMinutos;
     }
 
-    public int getTotalDeAvaliacoes(){
+    public int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;
     }
 
-    public void exibeFichaTecnica(){
+    public void exibeFichaTecnica() {
         System.out.println("Nome do Filme: " + nome);
         System.out.println("Ano de L  ancamento: " + anoDeLancamento);
 
     }
-    public void avalia (double nota){
+
+    public void avalia(double nota) {
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
@@ -54,7 +55,7 @@ public class Titulo {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-    double pegaMedia(){
+    double pegaMedia() {
         return somaDasAvaliacoes / totalDeAvaliacoes;
 
     }
