@@ -9,7 +9,7 @@ import java.net.http.HttpResponse;
 public class PrincipalComBusca {
     static void main() throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
-        HttpRequest  request = HttpRequest.newBuilder()
+        HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://www.omdbapi.com/?i=tt3896198&apikey=9f5e6515"))
                 .build();
         HttpResponse<String> response = client
