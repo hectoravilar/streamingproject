@@ -7,6 +7,7 @@ import project.java.hector.streaming.modelos.Filme;
 import project.java.hector.streaming.modelos.Serie;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Principal {
     static void main() {
@@ -53,7 +54,7 @@ public class Principal {
         filmeDoHector.setDuracaoEmMinutos(200);
         filmeDoHector.avalia(8);
 
-        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        List<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filmeDoHector);
         listaDeFilmes.add(meuFilme);
         listaDeFilmes.add(outroFilme);
