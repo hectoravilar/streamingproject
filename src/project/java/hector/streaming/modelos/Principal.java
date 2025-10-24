@@ -7,9 +7,7 @@ import java.util.ArrayList;
 
 public class Principal {
     static void main() {
-        var meuFilme = new Filme();
-        meuFilme.setNome("Back to the future");
-        meuFilme.setAnoDeLancamento(1985);
+        var meuFilme = new Filme("Back to the future", 1985);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duracao do Filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -20,9 +18,7 @@ public class Principal {
         System.out.println("Total de avaliacoes " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        var lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        var lost = new Serie(2000, "lost");
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -30,9 +26,7 @@ public class Principal {
         System.out.println("Duracao da Serie " + lost.getDuracaoEmMinutos());
 
 
-        var outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2003);
+        var outroFilme = new Filme("Avatar", 2003);
         outroFilme.setDuracaoEmMinutos(200);
         System.out.println("Duracao do Filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -52,10 +46,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoHector = new Filme();
+        var filmeDoHector = new Filme("The Matrix", 1999);
         filmeDoHector.setDuracaoEmMinutos(200);
-        filmeDoHector.setNome("The Matrix");
-        filmeDoHector.setAnoDeLancamento(1999);
         filmeDoHector.avalia(8);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
@@ -66,6 +58,7 @@ public class Principal {
         System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
         System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
+
 
     }
 }

@@ -8,6 +8,11 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
+    public Titulo(int anoDeLancamento, String nome) {
+        this.anoDeLancamento = anoDeLancamento;
+        this.nome = nome;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -30,7 +35,7 @@ public class Titulo {
 
     public void exibeFichaTecnica() {
         System.out.println("Nome do Filme: " + nome);
-        System.out.println("Ano de L  ancamento: " + anoDeLancamento);
+        System.out.println("Ano de Lancamento: " + anoDeLancamento);
 
     }
 
