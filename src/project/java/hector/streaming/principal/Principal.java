@@ -1,7 +1,10 @@
-package project.java.hector.streaming.modelos;
+package project.java.hector.streaming.principal;
 
 import project.java.hector.streaming.calculos.Recomendacao;
 import project.java.hector.streaming.calculos.CalculadoraDeTempo;
+import project.java.hector.streaming.modelos.Episodio;
+import project.java.hector.streaming.modelos.Filme;
+import project.java.hector.streaming.modelos.Serie;
 
 import java.util.ArrayList;
 
@@ -18,22 +21,22 @@ public class Principal {
         System.out.println("Total de avaliacoes " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        var lost = new Serie(2000, "lost");
-        lost.exibeFichaTecnica();
-        lost.setTemporadas(10);
-        lost.setEpisodiosPorTemporada(10);
-        lost.setMinutosPorEpisodio(50);
-        System.out.println("Duracao da Serie " + lost.getDuracaoEmMinutos());
+        var Friends = new Serie(1994, "Friends");
+        Friends.exibeFichaTecnica();
+        Friends.setTemporadas(10);
+        Friends.setEpisodiosPorTemporada(10);
+        Friends.setMinutosPorEpisodio(23);
+        System.out.println("Duracao da Serie " + Friends.getDuracaoEmMinutos());
 
 
-        var outroFilme = new Filme("Avatar", 2003);
+        var outroFilme = new Filme("Spider Man", 2002);
         outroFilme.setDuracaoEmMinutos(200);
         System.out.println("Duracao do Filme: " + meuFilme.getDuracaoEmMinutos());
 
         var calculadora = new CalculadoraDeTempo();
         calculadora.inclui(meuFilme);
         calculadora.inclui(outroFilme);
-        calculadora.inclui(lost);
+        calculadora.inclui(Friends);
         System.out.println(calculadora.getTempoTotal());
 
 
@@ -42,7 +45,7 @@ public class Principal {
 
         var episodio = new Episodio();
         episodio.setNumero(1);
-        episodio.setSerie(lost);
+        episodio.setSerie(Friends);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 

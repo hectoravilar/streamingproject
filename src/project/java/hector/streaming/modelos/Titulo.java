@@ -60,7 +60,7 @@ public class Titulo {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-    double pegaMedia() {
+    public double pegaMedia() {
         return somaDasAvaliacoes / totalDeAvaliacoes;
 
     }
